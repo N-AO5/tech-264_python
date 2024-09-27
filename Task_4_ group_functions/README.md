@@ -81,7 +81,13 @@ print(addition(4, 4))  #the 4's are the arguments
         - Print the type of the tuple that was passed in as an arguments
         - Loop through the tuple and print each item in the tuple on a separate line
    - After calling the function, the output should be:
-
+```
+def print_every_number(*args):  #*args takes all the arguments and creates a tuple
+        print(type(args))
+        for num in args:
+            print(num)
+            print_every_number('1', '2', '3')
+````
 ````
 <class 'tuple'>
 1
@@ -95,30 +101,49 @@ print(addition(4, 4))  #the 4's are the arguments
 ````
    - Explain what character allows your function to accept multiple arguments
 
+
 7. Make a function which gives a hint about an argument's data type
 
     - Some people think stricter typing should be used with Python as best practice, let's find out why
-1. See what happens if you call your earlier greet function with this line of code:
+       1. See what happens if you call your earlier greet function with this line of code:
 
-greeting(24601)
-2. To HELP us avoid this type of error, define the type of argument accepted into our function so that we are given a warning BEFORE we even run out Python script:
+           ```greeting(24601)```
 
-1. Define that data type accepted by your greet function is a string
-2. Notice that PyCharm now gives the warning Expected type 'str', got 'int' instead BEFORE you even run your code
+          2. To HELP us avoid this type of error, define the type of argument accepted into our function so that we are given a warning BEFORE we even run out Python script
+               ````
+             def greet(name: str):
+               print("Hello my name is " + name + ".")
+              greet(24601)
+             ````
+          
+             - Define that data type accepted by your greet function is a string
+             - Notice that PyCharm now gives the warning Expected type 'str', got 'int' instead BEFORE you even run your code
+
+
 8. Make a function which gives a hint about a return value's data type
+   
 
 Let's make a new function to bring it all together, also to provide type hints for all arguments, function return values and variables used...
 
-The function should be named division:
-It should divide 2 integers accepted as arguments
-It should return the result of the division
-The arguments should:
-have their types defined
-have the default values of 2 and 5 (therefore, by default 2 will be divided by 5 and have the result 0.4)
-NEW! Define the value returned as a float for the type hint
-NEW! Before calling the function, define variables a and b in Python as strongly-typed integers with the values 4 and 6
-You should call the function with this line of code:
-print(division(a, b))
-Also check the default values work if no values are passed into the function
+- The function should be named division:
+    - It should divide 2 integers accepted as arguments
+    - It should return the result of the division
+      * The arguments should:
+             have their types defined
+             have the default values of 2 and 5 (therefore, by default 2 will be divided by 5 and have the result 0.4)
+* NEW! Define the value returned as a float for the type hint
+    - NEW! Before calling the function, define variables a and b in Python as strongly-typed integers with the values 4 and 6
+     -  You should call the function with this line of code:
+      print(division(a, b))
+      Also check the default values work if no values are passed into the function
+````
+
+def division(a : int = 4, b : int = 6) ->float:
+    return a/b
+a = 4
+b = 6
+print(division(a, b ))
+
+````
 9. What are some good practices when it comes to functions?
 
