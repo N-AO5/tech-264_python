@@ -230,3 +230,12 @@ Key and value: 'server2' = '{'hostname': 'db-server-1', 'ip_address': '192.168.1
 
 Extra guidance:
 Use Gen AI (ChatGPT or Google Gemini) to help speed up these tasks as much as you need to
+
+### Validate JSON folder 
+see validate_json_file.py
+
+use terminal on pycharm to cd into the direc w the see validate_json_file.py
+type in terminal:  python .\validate_json_file.py .\servers.json
+python. whatever direc then file you want to validate
+pytho
+

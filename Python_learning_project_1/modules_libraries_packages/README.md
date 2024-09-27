@@ -61,10 +61,3 @@ for name in dir(builtins):
 - use PIP to install libraries and modules on a command line
 
 
-### Validate JSON folder 
-see validate_json_file.py
-
-use terminal on pycharm to cd into the direc w the see validate_json_file.py
-type in terminal:  python .\validate_json_file.py .\servers.json
-python. whatever direc then file you want to validate
-pythn
