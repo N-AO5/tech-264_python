@@ -3,7 +3,7 @@
     - Name it 'print_something' and all it should do it print something to the screen
     - Call the function to test it works
 ````
-def print_something():
+def print_something():  #the function must be defined first
     print("hello,world!") #def signals it as a function
 print_something() #calls the function to work
 ````
@@ -15,8 +15,8 @@ print_something() #calls the function to work
      - Prints the string variable received as an argument
 
 ````
-def print_something(argument: str): #define as a string
-    print(argument)             #def signals it as a function
+def print_something(argument: str): #define with a string variable as the argument
+    print(argument)             #def defines the "print_something"  as a function print it as a function
 print_something("hello world")  #calls the function to work
 ````
 
@@ -28,8 +28,8 @@ print_something("hello world")  #calls the function to work
   - Make sure the print statement in your function uses concatentation (ie. +) rather than an f-string
   - Output should be:
 ```` 
-def greet(name):
-    print("Hello my name is " + name + "."))
+def greet(name): #define the function with the argument "name"
+    print("Hello, my name is " + name + ".") #string with the argument concatenated
 greet("Susan")
 
  #output
@@ -63,11 +63,10 @@ print (addition(2, 2))
    ```print(addition(4, 4))```
    - Explain why the answer is now 8
 ````
- def addition(int1=2, int2=2):  #defined function block, int1 and int2 are variables to be used within the function block (parameter)
-    return int1 + int2          #returns the addition of the int
-
-
-print(addition(4, 4))  #the 4's are the arguments
+def addition(int1=2,
+             int2=2):  # defined function block, int1 and int2 are variables to be used within the function block (parameter)
+    return int1 + int2  # returns the addition of the int
+print(addition(4, 4))  #the 4's are the argument that overwrite the default arguments
 ````  
 ****the last line defines the initial default values and the function uses them instead****
 
@@ -111,9 +110,12 @@ def print_every_number(*args):  #*args takes all the arguments and creates a tup
 
           2. To HELP us avoid this type of error, define the type of argument accepted into our function so that we are given a warning BEFORE we even run out Python script
                ````
-             def greet(name: str):
+             def greet(name: str): #this tells you that the function only accepts strings, the argument is defined as a string
                print("Hello my name is " + name + ".")
-              greet(24601)
+
+             greet(name="susan")
+
+             greet(24601) # the argument is defined as a sting so when the yellow line appears under the parameter to hint that it wants a str
              ````
           
              - Define that data type accepted by your greet function is a string
@@ -138,10 +140,10 @@ Let's make a new function to bring it all together, also to provide type hints f
       Also check the default values work if no values are passed into the function
 ````
 
-def division(a : int = 4, b : int = 6) ->float:
-    return a/b
-a = 4
-b = 6
+def division(a : int = 4, b : int = 6) ->float: #the arrow tells you the return should be a float
+    return a/b  #the definition above defines the argument to have a default value of =6 or =4
+a: int = 4  #defines the variables as an int too
+b: int = 6
 print(division(a, b ))
 
 ````

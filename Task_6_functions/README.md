@@ -72,11 +72,156 @@ It is written in a text format  using JavaScript object syntax, but it is langua
 
 * Advantages of using it?
 
+  - it is easy for humans to read
+  - it is language independent
 
 * What data types can it store/use?
-* What is the JSON syntax for:
-  * Name value pairs?
-  * Objects?
-  * How to separate data (key/value pairs) from one another?
-  * JSON arrays (these are like lists in python)?
 
+  - strings
+  - numbers
+  - lists
+  - key-value pairs
+  - boolean statements
+
+* What is the JSON syntax for:
+  * Name value pairs? ```` "name": "values" ````
+  * Objects? ```` { "key1": "value1"} ````
+  * How to separate data (key/value pairs) from one another? u2sing a comma ","
+  * JSON arrays (these are like lists in python)? ```` ["item1", "item2"]
+
+### Task 4: Convert a Python dictionary into a JSON-formatted string and a JSON file
+
+Research:
+
+What is encoding vs serialising (very quick, two or three dot points to understand the difference)
+Work out which one of them are you doing with the subtasks below
+
+- Encoding is converting data from one format to another
+- Serializing is converting a data structure (eg. object and lists) into a format that can be stored and transmitted but then restructured later. 
+- The result is a byte stream or a string that represents the original data structure
+
+Starting code:
+
+````
+# create the dictionary
+servers_dict = {
+    "server1": {
+        "hostname": "web-server-1",
+        "ip_address": "192.168.1.1",
+        "role": "web",
+        "status": "active"
+    },
+    "server2": {
+        "hostname": "db-server-1",
+        "ip_address": "192.168.1.2",
+        "role": "database",
+        "status": "maintenance"
+    }
+}
+
+````
+Subtasks:
+
+* Convert this Python dictionary into a JSON-formatted string
+* Convert this Python dictionary to a JSON file
+
+````
+# create the dictionary
+
+import json     #import the json module
+servers_dict = {
+    "server1": {
+        "hostname": "web-server-1",
+        "ip_address": "192.168.1.1",
+        "role": "web",
+        "status": "active"
+    },
+    "server2": {
+        "hostname": "db-server-1",
+        "ip_address": "192.168.1.2",
+        "role": "database",
+        "status": "maintenance"
+    }
+}
+
+json_string = json.dumps(servers_dict, indent=4)  # json.dumps converts the dict to a json formatted string, the indent=4 is an argument that adds an indentation to make it more readable
+print(json_string)
+
+#output
+{
+    "server1": {
+        "hostname": "web-server-1",
+        "ip_address": "192.168.1.1",
+        "role": "web",
+        "status": "active"
+    },
+    "server2": {
+        "hostname": "db-server-1",
+        "ip_address": "192.168.1.2",
+        "role": "database",
+        "status": "maintenance"
+    }
+}
+
+````
+Extra guidance:
+
+* Use the json library
+* Write any other code necessary to test things converted correctly
+* Use Gen AI (ChatGPT or Google Gemini) to help speed up this task as much as you need to.  However what's important is that:
+* You made sure you come up with a simple version of code that you understand rather than some complex code it might generate for you
+* Make sure you get your head around what your code does + add your own comments to explain each part of the code
+
+### Task 5: Convert JSON file to Python dictionary
+
+
+Use Gen AI (ChatGPT or Google Gemini) to help speed up this task as much as you need to.  However what's important is that:
+You made sure you come up with a simple version of code that you understand rather than some complex code it might generate for you
+Make sure you get your head around what your code does + add your own comments to explain each part of the code
+
+
+Steps:
+
+Create a new file servers.json and add this JSON to it:
+````
+{
+	"server1": {
+		"hostname": "web-server-1",
+		"ip_address": "192.168.1.1",
+		"role": "web",
+		"status": "active"
+	},
+	"server2": {
+		"hostname": "db-server-1",
+		"ip_address": "192.168.1.2",
+		"role": "database",
+		"status": "maintenance"
+	}
+}
+````
+Create a file called parse_json_to_dict.py and add code to it to: Steps:
+
+* Use 'with' to open the file created above
+
+* Parse contents the JSON file into a Python dictionary named "servers"
+
+* Print out the type of "servers"
+
+* Print out the dictionary record with the key "server1"
+
+* Print out the dictionary record with the key "server2"
+
+* Print all of the keys and values. Output should be:
+
+Key and value: 'server1' = '{'hostname': 'web-server-1', 'ip_address': '192.168.1.1', 'role': 'web', 'status': 'active'}'
+  Record key and sub value: 'hostname' = 'web-server-1'
+  Record key and sub value: 'ip_address' = '192.168.1.1'
+  Record key and sub value: 'role' = 'web'
+  Record key and sub value: 'status' = 'active'
+Key and value: 'server2' = '{'hostname': 'db-server-1', 'ip_address': '192.168.1.2', 'role': 'database', 'status': 'maintenance'}'
+  Record key and sub value: 'hostname' = 'db-server-1'
+  Record key and sub value: 'ip_address' = '192.168.1.2'
+  Record key and sub value: 'role' = 'database'
+  Record key and sub value: 'status' = 'maintenance'
+Extra guidance:
+Use Gen AI (ChatGPT or Google Gemini) to help speed up these tasks as much as you need to
