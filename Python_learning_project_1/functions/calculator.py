@@ -11,6 +11,11 @@ def multiply(a: int, b: int) -> int:
 print(multiply(1, 2))
 
 def divide(a: int, b: int) -> float:
-    return a / b
-print(divide(1, 2))
+    if b != 0:
+     return a / b
+    else:
+        return "Cannot divide by zero!" #the if statement added bc a division by zero isn't possible
+print(divide(1, 0))
+ # Implement more complex operations, such as handling parentheses, exponentiation
 
+#  More advanced operations should continue to be broken into separate functions

@@ -1,30 +1,20 @@
-Difference between
-- module = single file that is imported
-- library = set of files that can be imported
-- package = installable [see 4th icon on left hand side]
-
-### Various libraries and modules
-
-````
-import this   #an easter egg, it's called PEP 20 python enhance proposals. These are here to help you improve your code
+#import this   #an easter egg, it's called PEP 20 python enhance proposals. These are here to help you improve your code
               #theres only 19, so you can come up w your own last own
-````
-````
-import random
-print(random.random())  #prints between 0-1. ".random()" is b
-print(random.randrange(1, 2))
 
-from random import random #you can impoort from the random modules using the random(), so you dont have to do random.random()
-print(random())
-````
-````
-import math    #inmprt from math module
-num_float = 23.66  #set the variable
-print(math.ceil(num_float))
-print(math.floor(num_float))
-print(math.pi)
-# gives us remainder of the 2 values # 5 can't go into 1, so the remainder is 1print(f"Remainder from 1/5: {math.remainder(1, 5)}")
-````
+#import random
+#print(random.random())  #prints between 0-1. ".random()" is b
+#print(random.randrange(1, 2))
+
+#from random import random #you can impoort from the random modules using the random(), so you dont have to do random.random()
+#print(random())
+
+#import math    #inmprt from math module
+#num_float = 23.66  #set the variable
+#print(math.ceil(num_float))
+#print(math.floor(num_float))
+#print(math.pi)
+# gives us remainder of the 2 values# 5 can't go into 1, so the remainder is 1print(f"Remainder from 1/5: {math.remainder(1, 5)}")
+
 
 #import os
 

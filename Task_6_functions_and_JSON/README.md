@@ -25,15 +25,14 @@ def multiply(a: int, b: int) -> int:
 print(multiply(1, 2))
 
 def divide(a: int, b: int) -> float:
-    return a / b
-print(divide(1, 2))
+    if b != 0:
+     return a / b
+    else:
+        return "Cannot divide by zero!" #the if statement added bc a division by zero isn't possible
+print(divide(1, 0))
+ # Implement more complex operations, such as handling parentheses, exponentiation
 
-#output
-3
--1
-2
-0.5
-
+#  More advanced operations should continue to be broken into separate functions
 
 ````
 Taking it to the next level: 
@@ -72,14 +71,16 @@ It is written in a text format  using JavaScript object syntax, but it is langua
 
 * Advantages of using it?
 
-  - it is easy for humans to read
-  - it is language independent
+  - it is easy for humans to read - file opens in plain text
+  - it is language independent - programming languages have libraries so it supports JSON
+  - easy for machines to convert JSON to other data types
+  
 
 * What data types can it store/use?
 
   - strings
   - numbers
-  - lists
+  - lists but must be saved within a key value pair
   - key-value pairs
   - boolean statements
 
@@ -88,6 +89,8 @@ It is written in a text format  using JavaScript object syntax, but it is langua
   * Objects? ```` { "key1": "value1"} ````
   * How to separate data (key/value pairs) from one another? u2sing a comma ","
   * JSON arrays (these are like lists in python)? ```` ["item1", "item2"]
+
+***differences between dictionaries and the JSON format***
 
 ### Task 4: Convert a Python dictionary into a JSON-formatted string and a JSON file
 
@@ -214,14 +217,16 @@ Create a file called parse_json_to_dict.py and add code to it to: Steps:
 * Print all of the keys and values. Output should be:
 
 Key and value: 'server1' = '{'hostname': 'web-server-1', 'ip_address': '192.168.1.1', 'role': 'web', 'status': 'active'}'
-  Record key and sub value: 'hostname' = 'web-server-1'
-  Record key and sub value: 'ip_address' = '192.168.1.1'
-  Record key and sub value: 'role' = 'web'
-  Record key and sub value: 'status' = 'active'
+* Record key and sub value: 'hostname' = 'web-server-1'
+* Record key and sub value: 'ip_address' = '192.168.1.1'
+* Record key and sub value: 'role' = 'web'
+* Record key and sub value: 'status' = 'active'
+
 Key and value: 'server2' = '{'hostname': 'db-server-1', 'ip_address': '192.168.1.2', 'role': 'database', 'status': 'maintenance'}'
-  Record key and sub value: 'hostname' = 'db-server-1'
-  Record key and sub value: 'ip_address' = '192.168.1.2'
-  Record key and sub value: 'role' = 'database'
-  Record key and sub value: 'status' = 'maintenance'
+* Record key and sub value: 'hostname' = 'db-server-1'
+* Record key and sub value: 'ip_address' = '192.168.1.2'
+* Record key and sub value: 'role' = 'database'
+* Record key and sub value: 'status' = 'maintenance'
+
 Extra guidance:
 Use Gen AI (ChatGPT or Google Gemini) to help speed up these tasks as much as you need to
