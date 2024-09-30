@@ -29,10 +29,18 @@ Creating a git repository:
 
    -  git branch -M main = change the master branch name to main bc github prefers it named that way
    -  git remote add origin *https . . .* = add the origin you want to push the commit to
-   -  git push -u origin main = push a repo from your local command line to a remote 
+   -  git push -u origin main = push a repo from your local command line to a remote. if public eeveryone can see both files and commits
   
     ![img.png](img.png) ***ignore the fatal message***
-- 
+
+folders that start with a dot are ignored 
+- .gitignore file = allows anything in the folder to be ignored during a git commit and push
+  - eg. sensitive information (personal files, credentials and passwords)
+  - very large files or folders that don't need to be pushed
+  - folders that build up (bin, out, etc)
+  - hidden system files
+
+-.idea (your pycharm settings) can be added to .gitignore
 
 ### Task 2: PyCharm/Python
 [variables_examples.py](..%2FPython_learning_project_1%2FVariables%2Fvariables_examples.py)
