@@ -41,7 +41,9 @@ folders that start with a dot are ignored
   - hidden system files
 
 -.idea (your pycharm settings) can be added to .gitignore
-
+- when files are moved to gitignore, it is still going to be seen in the commmit
+  - git rm --cached -r .idea = remove evrything in the file (.idea) that is put in tth
+ 
 ### Task 2: PyCharm/Python
 [variables_examples.py](..%2FPython_learning_project_1%2FVariables%2Fvariables_examples.py)
 

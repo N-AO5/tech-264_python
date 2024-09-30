@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Task_3_control_flow" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/tech264-test-git" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/tech264-test-git/test-git" vcs="Git" />
-  </component>
-</project>
