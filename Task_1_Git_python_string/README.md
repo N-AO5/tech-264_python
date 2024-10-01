@@ -33,16 +33,30 @@ Creating a git repository:
   
     ![img.png](img.png) ***ignore the fatal message***
 
+
+### Remove a file you don't want to commit
 folders that start with a dot are ignored 
-- .gitignore file = allows anything in the folder to be ignored during a git commit and push
+- ```.gitignore file``` = allows anything in the folder to be ignored during a git commit and push
   - eg. sensitive information (personal files, credentials and passwords)
   - very large files or folders that don't need to be pushed
   - folders that build up (bin, out, etc)
   - hidden system files
 
--.idea (your pycharm settings) can be added to .gitignore
-- when files are moved to gitignore, it is still going to be seen in the commmit
-  - git rm --cached -r .idea = remove evrything in the file (.idea) that is put in tth
+- ```.idea ```(your pycharm settings) can be added to ```.gitignore```
+  - open a ```.gitignore``` repo and:
+![img_1.png](img_1.png)
+
+- when files are moved to gitignore, it is still going to be seen in the previous commits
+  - ```git rm --cached -r .idea``` = remove everything in the file (.idea) that is put in the .gitignore file and do a git commit and push
+
+- but the file is still available if the push is public as ppl can just go back to previous commit with that file
+
+IF YOU PUSH PERSONAL CREDENTIALS ON A PUBLIC REPO TO GITHUB REPO THERE IS A FINE 
+  - OPTION 1 "git reset", removes previous commit with that file DANGEROUS - CAN LOSE WORK
+  - OPTION 2 
+    - remove the github repo IMMEDIATELY (you are now safe)
+    - remove the sensitive information from your local repo
+    - git remove the commit history, remove the .git folder, you will the latest files, but no history of past commits
  
 ### Task 2: PyCharm/Python
 [variables_examples.py](..%2FPython_learning_project_1%2FVariables%2Fvariables_examples.py)

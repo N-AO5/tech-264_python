@@ -2,10 +2,11 @@
 import requests
 import json
 
+
 # Get the list of pokemon from the API
 url = 'https://pokeapi.co/api/v2/pokemon/'
 response = requests.get(url)
-pokemon_list = json.loads(response.text)['results']
+pokemon_list = json.loads(response.text)['results'] #gets all the
 
 for pokemon in pokemon_list:
     print(pokemon['name'])
@@ -37,3 +38,9 @@ print('Name: {}'.format(pokemon_data['name']))
 print('Weight: {}'.format(weight_formatted) + "(kgs)")
 print('Height: {}'.format(height_formatted) + "(m)")
 print('Ability: {}'.format(ability['name']))
+
+# pick random pokemon for CPU
+import random
+
+
+
