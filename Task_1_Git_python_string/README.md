@@ -5,6 +5,7 @@ Creating a git repository:
 - ls = list 
 - cd ... = open directory
 - mkdir ... = make directory
+- touch ... = make a blank file
 - git init = initialise a git repository
 - git status = any commit? and untracked files?
 - git add ...= get a file ready to be commited
@@ -13,7 +14,7 @@ Creating a git repository:
 - git log = show commits starting from the latest at the top 
 - git log --oneline = id for commits
 - git diff *commit id 1* *commit id 2* = show changes in commits
-
+-
     - can only compare from one commit to the next
 
 - git checkout *commit id* = go to the commit id'd (previous commit)
@@ -35,6 +36,7 @@ Creating a git repository:
 
 
 ### Remove a file you don't want to commit
+- to see hidden folders = used ``git -a``
 folders that start with a dot are ignored 
 - ```.gitignore file``` = allows anything in the folder to be ignored during a git commit and push
   - eg. sensitive information (personal files, credentials and passwords)

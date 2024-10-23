@@ -12,10 +12,14 @@ user_guess = input("Guess a number: ")
 
 # Check if this input matches magic_number
 while magic_number and input_count < 4 :      # While the magic_number is true and the count of user inputs is less than 5
-    magic_number = "2"    #set the correct magic number as 2
+    magic_number = "2" #set the correct magic number as 2
+    if user_guess.isdigit():
+        no_guesses = 5
+        input_count += 1
+        print (f"you have {no_guesses -1} guesses left!")
     if user_guess == magic_number: print("You guessed the magic number!")
     else:
-     print("You guessed the wrong magic number!") # Let the user know if the response was correct or not
+        print(f"you guessed the wrong magic number!")
     user_guess = input("Guess a number: ")
     input_count += 1
 
